@@ -65,7 +65,7 @@ public class Shooter : MonoBehaviour
             Rigidbody2D rb = projectile.GetComponent<Rigidbody2D>();
             if(rb != null)
             {
-                rb.velocity = transform.up * projectileSpeed;
+                rb.linearVelocity = transform.up * projectileSpeed;
             }
             Destroy(projectile, projectileLifetime);
             audioPlayer.PlayShootingClip();
